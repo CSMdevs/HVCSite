@@ -1,17 +1,21 @@
-
 html {
     font-family: Arial;
+    margin: 0;
 }
 
 body {
-    background-color: rgb(27, 109, 108)
+    background-color: rgb(27, 109, 108);
+    margin: 0;
+    padding: 0;
 }
 
 .header {
+    position: relative;
     background-color: whitesmoke;
     height: 50px;
     width: 100%;
-
+    top: -10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
 }
 
@@ -50,38 +54,92 @@ body {
 
 .NewsImage {
     position: relative;
-    width: 50%;
-    left:  45%;
+    width: 35%;
+    left: 60%;
     border-radius: 10px;
 }
 
 .Headline {
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: bold;
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 10%;
     width: 30%;
 }
 
 .NewsText {
-    font-size: 2vw;
+    font-size: 1.5vw;
     width: 35%;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 10%;
 }
 
 .BottomMenus {
     background-color: whitesmoke;
-    height: 650px;
-    overflow: hidden;
+    height: 100%;
+    margin: 0;
     position: relative;
 
 }
+
 .BottomFlex {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-display: flex;
-flex-direction: row;
+}
 
+.flex {
+    margin: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: #E8E8E8;
+    border-radius: 3px;
+    height: 50vh;
+}
+
+
+@media screen and (max-width: 750px) {
+    .BottomFlex {
+        display: block;
+        width: 100%;
+        justify-content: center;
+    }
+    .flex {
+        background-color: green;
+        width: 80%;
+        margin: 20px auto;
+
+    }
+}
+
+.menuitem {
+    margin: 10px;
+    margin-top: 20px;
+    height: 5vh;
+    width: auto;
+    color: rgb(27, 109, 108);
+    background-color: whitesmoke;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.2em;
+    position: relative;
+    border-radius: 5px;
+}
+
+.menutitle {
+    margin: 10px;
+    height: 5vh;
+    width: auto;
+    color: #303030;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+    position: relative;
 }
