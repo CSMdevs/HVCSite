@@ -77,5 +77,11 @@ body {
     height: 650px;
     overflow: hidden;
     position: relative;
-    
+
+}
+.BottomFlex {
+
+display: flex;
+flex-direction: row;
+
 }
