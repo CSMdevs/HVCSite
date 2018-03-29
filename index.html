@@ -6,7 +6,7 @@
     <title>HvC Website</title>
     <link rel="stylesheet" type="text/css" href="css/Main.css">
     <link rel="stylesheet" type="text/css" href="css/Slideshow.css">
-
+   
 </head>
 
 <body>
@@ -30,21 +30,23 @@
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-            <img src="images/ExampleNews.jpg" alt="Het HVC logo" class="NewsImage">
-            <div class="Headline">Main Heading 1</div>
-            <div class="NewsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur massa eu quam pretium, in mattis metus feugiat. Pellentesque lacinia.<br><br>
+            <img src="images/NightOfTalents.png" alt="Het HVC logo" class="NewsImage">
+            <div class="Headline">Night of the Talents</div>
+            <div class="NewsText">Komt allen naar de Night of the Talents. Vrijdag 6 april om 19:15 uur in de Aula Beurtschipper. Kaartjes à € 3,00 worden in de pauzes verkocht. Let op het omroepbericht.<br><br>
             </div>
         </div>
 
         <div class="mySlides fade">
-            <img src="images/ExampleNews1.jpg" alt="Het HVC logo" class="NewsImage">
-            <div class="Headline">Main Heading 2</div>
-            <div class="NewsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur massa eu quam pretium, in mattis metus feugiat. Pellentesque lacinia.<br><br>
+            <img src="images/StilleWeek.png" alt="Het HVC logo" class="NewsImage">
+            <div class="Headline">Goede of Stille week</div>
+            <div class="NewsText">De week voor Pasen wordt ook wel Goede of Stille Week genoemd. Een aantal dagen hebben in deze week dan ook een bijzondere naam.
+
+Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 uur op school verwacht. De lokalen staan ook in de bijlage.<br><a href="http://www.hvc.nl/uploads/news/attachments/1307/goede-of-stille-week.pdf">Klik Hier Voor de Bijlage</a><br><br>
             </div>
         </div>
 
         <div class="mySlides fade">
-            <img src="images/ExampleNews2.jpg" alt="Het HVC logo" class="NewsImage">
+            <img src="images/Zaalvoetbal.jpg" alt="Het HVC logo" class="NewsImage">
             <div class="Headline">Main Heading 3</div>
             <div class="NewsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur massa eu quam pretium, in mattis metus feugiat. Pellentesque lacinia.<br><br>
             </div>
@@ -73,8 +75,8 @@
                 <div class="flexcontent">
                 <div class="menu">
                     <div class="menutitle">Menu</div>
-                    <div class="menuitem">Magister</div>
-                    <div class=menuitem>Rooster</div>
+                   <a href="http://hvc.magister.net"><div class="menuitem">Magister</div></a> 
+                   <a id="myBtn"><div class=menuitem>Rooster</div></a> 
                     <div class=menuitem>Roosterwijzigingen</div>
                     <div class=menuitem>Toetsen</div>
                     <div class=menuitem>Schoolmail</div>
@@ -88,8 +90,24 @@
 
 
     </div>
+<!-- Trigger/Open The Modal -->
 
+
+<!-- RoosterWebForm -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form>Leerlingnummer: <br>
+    <input type="text" name="LeerlingNummer" id="leerlingNummer">
+    <button onclick="roosterWeb()">Bekijk je rooster</button>
+    </form>
+  </div>
+
+</div>
 </body>
 <script type="text/javascript" src="js/slideshow.js"></script>
-
+ <script type="text/javascript" src="js/modal.js"></script>
+ <script type="text/javascript" src="js/roosterweb.js"></script>
 </html>
