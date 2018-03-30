@@ -6,11 +6,13 @@
     <title>HvC Website</title>
     <link rel="stylesheet" type="text/css" href="css/Main.css">
     <link rel="stylesheet" type="text/css" href="css/Slideshow.css">
-   
+
 </head>
 
+3
+
 <body>
-    
+
     <!--Begin Header-->
     <div class="header">
         <img src="images/hvc-logo-groot.png" alt="Het HVC logo" class="logo">
@@ -27,45 +29,43 @@
 
     <!-- SlideShow Begin -->
     <div class="news">
-    <div class="slideshow-container">
+        <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <img src="images/NightOfTalents.png" alt="Het HVC logo" class="NewsImage">
-            <div class="Headline">Night of the Talents</div>
-            <div class="NewsText">Komt allen naar de Night of the Talents. Vrijdag 6 april om 19:15 uur in de Aula Beurtschipper. Kaartjes à € 3,00 worden in de pauzes verkocht. Let op het omroepbericht.<br><br>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="images/NightOfTalents.png" alt="Het HVC logo" class="NewsImage">
+                <div class="Headline">Night of the Talents</div>
+                <div class="NewsText">Komt allen naar de Night of the Talents. Vrijdag 6 april om 19:15 uur in de Aula Beurtschipper. Kaartjes à € 3,00 worden in de pauzes verkocht. Let op het omroepbericht.<br><br>
+                </div>
             </div>
-        </div>
 
-        <div class="mySlides fade">
-            <img src="images/StilleWeek.png" alt="Het HVC logo" class="NewsImage">
-            <div class="Headline">Goede of Stille week</div>
-            <div class="NewsText">De week voor Pasen wordt ook wel Goede of Stille Week genoemd. Een aantal dagen hebben in deze week dan ook een bijzondere naam.
-
-Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 uur op school verwacht. De lokalen staan ook in de bijlage.<br><a href="http://www.hvc.nl/uploads/news/attachments/1307/goede-of-stille-week.pdf">Klik Hier Voor de Bijlage</a><br><br>
+            <div class="mySlides fade">
+                <img src="images/StilleWeek.png" alt="Het HVC logo" class="NewsImage">
+                <div class="Headline">Goede of Stille week</div>
+                <div class="NewsText">De week voor Pasen wordt ook wel Goede of Stille Week genoemd. Een aantal dagen hebben in deze week dan ook een bijzondere naam. Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 uur op school verwacht. De lokalen staan ook in de bijlage.<br><a href="http://www.hvc.nl/uploads/news/attachments/1307/goede-of-stille-week.pdf">Klik Hier Voor de Bijlage</a><br><br>
+                </div>
             </div>
-        </div>
 
-        <div class="mySlides fade">
-            <img src="images/Zaalvoetbal.jpg" alt="Het HVC logo" class="NewsImage">
-            <div class="Headline">Main Heading 3</div>
-            <div class="NewsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur massa eu quam pretium, in mattis metus feugiat. Pellentesque lacinia.<br><br>
+            <div class="mySlides fade">
+                <img src="images/Zaalvoetbal.jpg" alt="Het HVC logo" class="NewsImage">
+                <div class="Headline">Main Heading 3</div>
+                <div class="NewsText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur massa eu quam pretium, in mattis metus feugiat. Pellentesque lacinia.<br><br>
+                </div>
             </div>
+
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
 
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </div>
     <!-- SlideShow End -->
 
@@ -74,13 +74,19 @@ Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 
         <div class="BottomFlex">
             <div class="flex">
                 <div class="flexcontent">
-                <div class="menu">
-                    <div class="menutitle">Menu</div>
-                   <a href="http://hvc.magister.net"><div class="menuitem">Magister</div></a> 
-                   <a id="myBtn"><div class=menuitem>Rooster</div></a> 
-                    <div class=menuitem>Roosterwijzigingen</div>
-                    <div class=menuitem>Toetsen</div>
-                    <div class=menuitem>Schoolmail</div>
+                    <div class="menu">
+                        <div class="menutitle">Menu</div>
+                        <a href="http://hvc.magister.net">
+                            <div class="menuitem">Magister</div>
+                        </a>
+                        <a id="myBtn">
+                            <div class=menuitem>Rooster</div>
+                        </a>
+                        <a id="BtnWijzig">
+                            <div class=menuitem>Roosterwijzigingen</div>
+                        </a>
+                        <div class=menuitem>Toetsen</div>
+                        <div class=menuitem>Schoolmail</div>
                     </div>
                 </div>
             </div>
@@ -91,24 +97,33 @@ Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 
 
 
     </div>
-<!-- Trigger/Open The Modal -->
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTkNniUuck7mCwlurGLqZnGokA2BRPbexkPYbI6rjpQ1U6nf8QDT3tDDJyBN7vP4WEP-6fFN4nFvFPS/pubhtml?widget=true&amp;headers=false"></iframe>
+    <!-- Trigger/Open The Modal -->
+    
 
-<!-- RoosterWebForm -->
-<div id="myModal" class="modal">
+    <!-- RoosterWebForm -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>Leerlingnummer: <br>
+                <input type="text" name="LeerlingNummer" id="leerlingNummer">
+                <button onclick="roosterWeb()">Bekijk je rooster</button>
+            </form>
+        </div>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form>Leerlingnummer: <br>
-    <input type="text" name="LeerlingNummer" id="leerlingNummer">
-    <button onclick="roosterWeb()">Bekijk je rooster</button>
-    </form>
-  </div>
+    </div>
+    <!-- Roosterwijzigingen-->
+    <div id="wijzig" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="sluit">&times;</span>
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTkNniUuck7mCwlurGLqZnGokA2BRPbexkPYbI6rjpQ1U6nf8QDT3tDDJyBN7vP4WEP-6fFN4nFvFPS/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
+        </div>
 
-</div>
+    </div>
 </body>
 <script type="text/javascript" src="js/slideshow.js"></script>
- <script type="text/javascript" src="js/modal.js"></script>
- <script type="text/javascript" src="js/roosterweb.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/roosterweb.js"></script>
+<script type="text/javascript" src="js/roosterwijzigingen.js"s></script>
 </html>
