@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Testing Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 </head>
+<!-- https://docs.google.com/spreadsheets/d/1xeb2qr-EGUFceEMdka4sbkYqG9sOYzRbhiLQoHixL7I/edit?usp=sharing -->
+
 <body>
+    <h1>Hier zouden de roosterwijzigingen moeten staan:</h1>
+    <p id=rooster></p>
 
-<h2>HTML Table</h2>
+    <script type='text/javascript'>
+        var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1xeb2qr-EGUFceEMdka4sbkYqG9sOYzRbhiLQoHixL7I/edit?usp=sharing';
 
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Misschienwerkt dit</td>
-  </tr>
-</table>
+        function init() {
+            // because we're using orderby: 'name' it will sort by the 'name' column
+            // and reverse: true will reverse that sort, so it should be in reverse
+            // alphabetical order
+            Tabletop.init({
+                key: publicSpreadsheetUrl,
+                callback: showInfo,
+                simpleSheet: true,
+                orderby: 'Name',
+                reverse: true
+            });
+        }
 
+        window.addEventListener('DOMContentLoaded', init)
+
+        function showInfo(data) {
+            // data comes through as a simple array since simpleSheet is turned on
+            document.getElementById("rooster").innerHTML = "<strong>Foods:</strong> " + [data[0].Docent.join(",");
+            console.log(data);
+        }
+    </script>
 </body>
+
 </html>
