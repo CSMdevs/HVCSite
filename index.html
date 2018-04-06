@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>HvC Website</title>
-    <link rel="stylesheet" type="text/css" href="css/Main.css">
-    <link rel="stylesheet" type="text/css" href="css/Modals.css">
-    <link rel="stylesheet" type="text/css" href="css/Slideshow.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
 </head>
@@ -79,58 +78,13 @@
                         <a href="http://hvc.magister.net">
                             <div class="menuitem"><i class="fas fa-graduation-cap"></i> <br>Magister</div>
                         </a>
-                        <div class="modal-part">
-                        <a href="#modal-zoom-in" class="btn-open-modal">
+                        
+                       
                             <div class=menuitem><i class="far fa-calendar-alt"></i><br> Rooster</div>
-                        </a>
-                        	<div class="modal zoom-in" id="modal-zoom-in">
-		<div class="modal-overlay">
-			<a href="#close"></a>
-		</div>
-		<div class="modal-container">
-			<div class="modal-container__header">
-				<div class="modal-container__header-close">
-					<a href="#close"><span class="icon-close">&times;</span> <span class="hide-text">Close</span></a>
-				</div>
-			</div>
-
-			<div class="modal-container__content">
-				<h3 class="modal-container__content-title">Rooster</h3>
-                <form>Leerlingnummer: <br>
-                <input type="text" name="LeerlingNummer" id="leerlingNummer">
-                <button onclick="roosterWeb()">Bekijk je rooster</button>
-            </form>
-			
-			</div>
-		</div>
-	</div>
-	</div>
-	<div class="modal-part">
-                         <a href="#modal-zoom-in" class="btn-open-modal">
-                            <div class=menuitem><i class="fas fa-edit"></i> <br>Roosterwijzigingen</div>
-                        </a>
-                        	<div class="modal zoom-in" id="modal-zoom-in">
-		<div class="modal-overlay">
-			<a href="#close"></a>
-		</div>
-		<div class="modal-container">
-			<div class="modal-container__header">
-				<div class="modal-container__header-close">
-					<a href="#close"><span class="icon-close">&times;</span> <span class="hide-text">Close</span></a>
-				</div>
-			</div>
-
-			<div class="modal-container__content">
-				<h3 class="modal-container__content-title">JEZUS</h3>
-                <form>KIT: <br>
-                <input type="text" name="LeerlingNummer" id="leerlingNummer">
-                <button onclick="roosterWeb()">Bekijk je rooster</button>
-            </form>
-			
-			</div>
-		</div>
-	</div>
-	</div>
+                    
+                    
+	
+	                    <div class=menuitem><i class="fas fa-edit"></i> <br>Roosterwijzigingen</div>
                         <div class=menuitem><i class="far fa-file-alt"></i><br> Toetsen</div>
                         <div class=menuitem><i class="far fa-envelope"></i> <br>Schoolmail</div>
                     </div>
@@ -151,9 +105,11 @@
     <!-- Trigger/Open The Modal -->
 
     <div id="footer">
-        <li><a href="https://www.facebook.com/pages/HVC/115915751766033">FaceBook</a></li>
-        <li><a href="https://twitter.com/HerbertVissers">Twitter</a></li>
-        <li><a href="https://www.youtube.com/user/HVC2012">Youtube</a></li>
+        <ol id="footer-socialmedia">
+            <li><a class="footer-socialmedia-links" href="https://www.facebook.com/pages/HVC/115915751766033">FaceBook</a></li>
+            <li><a class="footer-socialmedia-links" href="https://twitter.com/HerbertVissers">Twitter</a></li>
+            <li><a class="footer-socialmedia-links" href="https://www.youtube.com/user/HVC2012">Youtube</a></li>
+        </ol>
     </div>
 </body>
 <script type="text/javascript" src="js/slideshow.js"></script>
