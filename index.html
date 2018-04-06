@@ -6,10 +6,19 @@
     <title>HvC Website</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-    
+
 <body>
 
     <!--Begin Header-->
@@ -41,7 +50,8 @@
             <div class="mySlides fade">
                 <img src="images/StilleWeek.png" alt="Het HVC logo" class="NewsImage">
                 <div class="Headline">Goede of Stille week</div>
-                <div class="NewsText">De week voor Pasen wordt ook wel Goede of Stille Week genoemd. Een aantal dagen hebben in deze week dan ook een bijzondere naam. Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 uur op school verwacht. De lokalen staan ook in de bijlage.<br><a href="http://www.hvc.nl/uploads/news/attachments/1307/goede-of-stille-week.pdf">Klik Hier Voor de Bijlage</a><br><br>
+                <div class="NewsText">De week voor Pasen wordt ook wel Goede of Stille Week genoemd. Een aantal dagen hebben in deze week dan ook een bijzondere naam. Bekijk in de bijlage de informatie voor deze week. Op donderdag word je om 9.55 uur op school verwacht. De
+                    lokalen staan ook in de bijlage.<br><a href="http://www.hvc.nl/uploads/news/attachments/1307/goede-of-stille-week.pdf">Klik Hier Voor de Bijlage</a><br><br>
                 </div>
             </div>
 
@@ -59,7 +69,7 @@
         </div>
         <br>
 
-        <!-- The dots/circles -->
+        <!-- The dots/circles --> 
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
@@ -73,52 +83,89 @@
         <div class="BottomFlex">
             <div class="flex">
                 <div class="flexcontent">
+
+
                     <div class="menu">
                         <div class="menutitle">Menu</div>
                         <a href="http://hvc.magister.net">
                             <div class="menuitem"><i class="fas fa-graduation-cap"></i> <br>Magister</div>
                         </a>
-                        
-                       
-                            <div class=menuitem><i class="far fa-calendar-alt"></i><br> Rooster</div>
-                    
-                    
-	
-	                    <div class=menuitem><i class="fas fa-edit"></i> <br>Roosterwijzigingen</div>
+                        <a data-toggle="modal" href="#roosterModal" class="btn btn-default">
+                            <div class=menuitem><i class="far fa-calendar-alt"></i><br>Rooster</div>
+                        </a>
+                        <a data-toggle="modal" href="#wijzigingenModal" class="btn btn-default">
+                            <div class=menuitem><i class="fas fa-edit"></i> <br>Roosterwijzigingen</div>
+                        </a>
                         <div class=menuitem><i class="far fa-file-alt"></i><br> Toetsen</div>
                         <div class=menuitem><i class="far fa-envelope"></i> <br>Schoolmail</div>
                     </div>
                 </div>
             </div>
             <div class="flex">Dik</div>
-            <div class="flex">Duper</div>
+            <div class="flex">
+                <iframe class="agendaFrame" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTOSAJhb06nU3-TrRFswBsJMrmKN9qNOK5wY2yGcX8ndDOwlvlnepmK5g5wmuv8NCK7rP0QVls12lUZ/pubhtml?widget=true&amp;headers=false"></iframe>
+                
+            </div>
         </div>
-
-
-	
-
-
-	
-
-
     </div>
-    <!-- Trigger/Open The Modal -->
+    
+    
+    
+    <!-- Begin Modals -->
+    <div id="roosterModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Rooster</h4>
+                </div>
+                <div class="modal-body">
+                    <form>Voer hier je leerlingnummer in: <br>
+                        <input type="text" name="LeerlingNummer" id="leerlingNummer">
+                        <button onclick="roosterWeb()">Bekijk je rooster</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="bttn" data-dismiss="modal">Sluiten</button>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wijzigingenModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Rooster</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTkNniUuck7mCwlurGLqZnGokA2BRPbexkPYbI6rjpQ1U6nf8QDT3tDDJyBN7vP4WEP-6fFN4nFvFPS/pubhtml?widget=true&amp;headers=false" width="100%" height="500"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="bttn" data-dismiss="modal">Sluiten</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modals -->
+
+    <!-- Begin Footer -->
     <div id="footer">
-        <ol id="footer-socialmedia">
-            <li><a class="footer-socialmedia-links" href="https://www.facebook.com/pages/HVC/115915751766033">FaceBook</a></li>
-            <li><a class="footer-socialmedia-links" href="https://twitter.com/HerbertVissers">Twitter</a></li>
-            <li><a class="footer-socialmedia-links" href="https://www.youtube.com/user/HVC2012">Youtube</a></li>
-        </ol>
+        <ul id="footer-socialmedia">
+            <li class="footer-socialmedia-list"><a class="footer-socialmedia-links" href="https://www.facebook.com/pages/HVC/115915751766033"><i class="fab fa-facebook-square"></i> FaceBook</a></li>
+            <li class="footer-socialmedia-list"><a class="footer-socialmedia-links" href="https://twitter.com/HerbertVissers"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li class="footer-socialmedia-list"><a class="footer-socialmedia-links" href="https://www.youtube.com/user/HVC2012"><i class="fab fa-youtube"></i> Youtube</a></li>
+        </ul>
     </div>
+    <!-- End Footer -->
+    
 </body>
 <script type="text/javascript" src="js/slideshow.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/roosterweb.js"></script>
 <script type="text/javascript" src="js/roosterwijzigingen.js"></script>
+
 </html>
-<!--<form>Leerlingnummer: <br>
-                <input type="text" name="LeerlingNummer" id="leerlingNummer">
-                <button onclick="roosterWeb()">Bekijk je rooster</button>
-            </form>-->
-<!--<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTkNniUuck7mCwlurGLqZnGokA2BRPbexkPYbI6rjpQ1U6nf8QDT3tDDJyBN7vP4WEP-6fFN4nFvFPS/pubhtml?widget=true&amp;headers=false" width="100%" height="500"></iframe> -->

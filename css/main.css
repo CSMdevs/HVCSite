@@ -2,6 +2,7 @@ html {
     font-family: Arial;
     margin: 0;
 }
+
 html a {
     text-decoration: none;
 }
@@ -13,7 +14,8 @@ body {
 }
 
 .header {
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     background-color: whitesmoke;
     height: 50px;
@@ -106,7 +108,7 @@ body {
     background-color: #E8E8E8;
     border-radius: 3px;
     height: 40vh;
-    
+
 }
 
 
@@ -117,10 +119,10 @@ body {
         justify-content: center;
     }
     .flex {
-        
+
         width: 80%;
         margin: 20px auto;
-        
+
 
     }
 }
@@ -128,7 +130,7 @@ body {
 .BottomFlex {
     padding-top: 1vw;
     padding-bottom: 1vw;
-    
+
     margin-top: 1vw;
     margin-bottom: 1vw;
 }
@@ -146,7 +148,7 @@ body {
     font-size: 1.2em;
     position: relative;
     border-radius: 5px;
- 
+
 }
 
 .menutitle {
@@ -161,14 +163,35 @@ body {
 }
 
 /* Footer */
+
 #footer {
-    background-color: rgba(24,160,20,0.5);
+    background-color: whitesmoke;
 }
 
 #footer-socialmedia {
     list-style-type: none;
+    text-align: center;
 }
 
 .footer-socialmedia-links {
+   
+}
+.footer-socialmedia-list {
+    display: inline;
+}
+
+#roosterModal {
+    position: absolute;
+    top: 100px;
+}
+
+#wijzigingenModal {
+    position: absolute;
+    top: 100px;
     
+}
+
+.agendaFrame {
+    height: 100%;
+    width: 100%;
 }
